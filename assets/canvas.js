@@ -219,7 +219,7 @@ function animation(){
 }
 
 // set interactive between mouse and the circles
-mouseInteractRadius = 100
+mouseInteractRadius = 200
 
 // set radius on circle, by default min = 10 and max = 100
 requestRadius(min = 5, max = 8)

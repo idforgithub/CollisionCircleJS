@@ -15,7 +15,7 @@ addEventListener('mousemove', function (event) {
     mouseVector.y = event.y
 })
 
-addEventListener('mouseout', function (event) {
+addEventListener('mouseout', function () {
     mouseVector.x = undefined
     mouseVector.y = undefined
 })
@@ -92,7 +92,6 @@ class Circle{
         
         if( this.vector.y + this.radius > innerHeight || this.vector.y - this.radius < 0)
             this.velocity.y = -this.velocity.y
-        
         
         if(calculateDistance(mouseVector.x, mouseVector.y, this.vector.x, this.vector.y) < mouseInteractRadius){
             this.opacity += .1
@@ -215,7 +214,6 @@ function animation(){
     circles.forEach(c => {
         c.collideUpdate(circles)
     })
-    
 }
 
 // set interactive between mouse and the circles
